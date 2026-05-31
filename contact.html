@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - QR Pro Tools</title>
+    <meta name="description" content="تواصل مع فريق QR Pro Tools - استفسارات، اقتراحات، أو دعم فني">
+    <meta name="author" content="Limrani Imad">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gpldroid.github.io/br-qr/contact.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .nav-bar {
+            background: #1e293b;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-bar .logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-details h3 {
+            font-size: 1rem;
+            color: #1e293b;
+        }
+
+        .contact-details p, .contact-details a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            color: #2563eb;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: #f1f5f9;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .social-link:hover span {
+            filter: brightness(0) invert(1);
+        }
+
+        .success-message, .error-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message {
+            background: #dcfce7;
+            color: #166534;
+            border-right: 4px solid #22c55e;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            border-right: 4px solid #ef4444;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1e293b;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .nav-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav-bar">
+    <a href="index.html" class="logo">QR Pro Tools</a>
+    <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html" class="active">اتصل بنا</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>📬 اتصل بنا</h1>
+    <p>نرحب باستفساراتك، اقتراحاتك، وملاحظاتك</p>
+</div>
+
+<div class="container">
+    <div class="contact-grid">
+        <!-- نموذج الاتصال -->
+        <div class="card">
+            <h2>✉️ أرسل رسالة</h2>
+            
+            <div id="successMsg" class="success-message">
+                ✅ تم إرسال رسالتك بنجاح! سنرد عليك في أقرب وقت.
+            </div>
+            <div id="errorMsg" class="error-message">
+                ⚠️ عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.
+            </div>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل *</label>
+                    <input type="text" id="name" name="name" required placeholder="أدخل اسمك">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني *</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">نوع الاستفسار *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">اختر...</option>
+                        <option value="سؤال تقني">سؤال تقني / دعم فني</option>
+                        <option value="اقتراح">اقتراح لتطوير المنصة</option>
+                        <option value="خطأ">الإبلاغ عن خطأ (Bug)</option>
+                        <option value="تعاون">طلب تعاون أو شراكة</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">الرسالة *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">📨 إرسال الرسالة</button>
+            </form>
+        </div>
+
+        <!-- معلومات الاتصال -->
+        <div class="card">
+            <h2>📞 معلومات التواصل</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h3>البريد الإلكتروني</h3>
+                        <a href="mailto:limrani.imad@example.com">limrani.imad@example.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div class="contact-details">
+                        <h3>أوقات الرد</h3>
+                        <p>خلال 24-48 ساعة عمل</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div class="contact-details">
+                        <h3>الموقع</h3>
+                        <p>المغرب (خدمة عالمية)</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 2rem;">🔗 تابعنا</h2>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <span>🐙</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter/X">
+                    <span>🐦</span>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <span>🔗</span>
+                </a>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+                <p style="font-size: 0.85rem; color: #64748b; text-align: center;">
+                    <strong>ملاحظة:</strong> جميع الاستفسارات مجانية تماماً. نحن نقدر وقتك ونسعى للرد بأسرع صورة.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الأسئلة الشائعة السريعة -->
+    <div class="card" style="margin-top: 2rem;">
+        <h2>❓ أسئلة متكررة</h2>
+        
+        <details style="margin-bottom: 1rem;">
+            <summary style="font-weight: bold; cursor: pointer; color: #2563eb;">هل خدمتكم مجانية حقاً؟</summary>
+            <p style="margin-top: 0.5rem; padding-right: 1rem;">نعم، QR Pro Tools مجانية بالكامل ولا توجد أي خطط للتحول إلى خدمة مدفوعة. نؤمن بأن التقنية يجب أن تكون في متناول الجميع.</p>
+        </details>
+
+        <details style="margin-bottom: 1rem;">
+            <summary style="font-weight: bold; cursor: pointer; color: #2563eb;">هل تبيعون بياناتي؟</summary>
+            <p style="margin-top: 0.5rem; padding-right: 1rem;">مطلقاً! نحن لا نجمع أي بيانات شخصية أصلاً، وجميع عمليات إنشاء وفحص QR تتم محلياً على جهازك. راجع <a href="privacy.html">سياسة الخصوصية</a> للمزيد.</p>
+        </details>
+
+        <details style="margin-bottom: 1rem;">
+            <summary style="font-weight: bold; cursor: pointer; color: #2563eb;">لماذا لا يعمل مسح الكاميرا على جهازي؟</summary>
+            <p style="margin-top: 0.5rem; padding-right: 1rem;">تأكد من منح الإذن لاستخدام الكاميرا عند ظهور طلب المتصفح. كما يجب استخدام متصفح حديث مثل Chrome، Firefox، Safari، أو Edge.</p>
+        </details>
+
+        <details>
+            <summary style="font-weight: bold; cursor: pointer; color: #2563eb;">كيف يمكنني دعم المشروع؟</summary>
+            <p style="margin-top: 0.5rem; padding-right: 1rem;">يمكنك دعمنا بمشاركة الأداة مع الآخرين، أو الإبلاغ عن أي مشكلة تواجهك، أو اقتراح ميزات جديدة. شاركنا رأيك عبر نموذج التواصل!</p>
+        </details>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 QR Pro Tools | صمم بواسطة <a href="about.html">عماد الدين لمراني</a></p>
+    <p><a href="privacy.html">سياسة الخصوصية</a> | <a href="terms.html">شروط الاستخدام</a> | <a href="contact.html">اتصل بنا</a></p>
+</footer>
+
+<script>
+    // معالجة نموذج الاتصال
+    const contactForm = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+
+    // استخدام خدمة Formspree كبديل مجاني لإرسال البريد الإلكتروني
+    // يمكنك التسجيل في https://formspree.io/ والحصول على endpoint مجاني
+    // ثم استبدال الرابط أدناه برابط النموذج الخاص بك
+    
+    // للعرض التوضيحي فقط - يظهر رسالة نجاح بدون إرسال فعلي
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // إخفاء أي رسائل سابقة
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        
+        // جمع البيانات
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+            date: new Date().toLocaleString('ar-MA')
+        };
+        
+        // للعرض التوضيحي - سنعرض رسالة نجاح
+        // في الإصدار الحقيقي، قم بإلغاء تعليق الكود أدناه واستخدام endpoint حقيقي
+        
+        /*
+        try {
+            const response = await fetch('https://formspree.io/f/your-endpoint-here', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+                successMsg.style.display = 'block';
+                contactForm.reset();
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            } else {
+                errorMsg.style.display = 'block';
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 5000);
+            }
+        } catch (error) {
+            errorMsg.style.display = 'block';
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+        */
+        
+        // للعرض التوضيحي فقط:
+        console.log('بيانات النموذج:', data);
+        successMsg.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => {
+            successMsg.style.display = 'none';
+        }, 5000);
+    });
+</script>
+
+</body>
+</html>
