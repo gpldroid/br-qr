@@ -1,0 +1,27 @@
+# robots.txt for QR Pro Tools
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+
+# خريطة الموقع
+Sitemap: https://gpldroid.github.io/br-qr/sitemap.xml
+
+# مدة التخزين المؤقت لمحركات البحث
+Crawl-delay: 5
+
+# روبوتات محددة
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Facebookbot
+Allow: /
