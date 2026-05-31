@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - QR Pro Tools</title>
+    <meta name="description" content="تعرف على فريق QR Pro Tools وقصة تطوير هذه المنصة المتكاملة لخدمات رموز QR">
+    <meta name="author" content="Limrani Imad">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gpldroid.github.io/br-qr/about.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .nav-bar {
+            background: #1e293b;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-bar .logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card p {
+            color: #475569;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .tech-badge {
+            background: #e2e8f0;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #1e293b;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1e293b;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .nav-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav-bar">
+    <a href="index.html" class="logo">QR Pro Tools</a>
+    <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html" class="active">من نحن</a>
+        <a href="contact.html">اتصل بنا</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>✨ من نحن</h1>
+    <p>قصة Passion، تقنية، وخدمة مجانية للجميع</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>👋 مرحباً بك في QR Pro Tools</h2>
+        <p>نحن منصة متخصصة في تقديم أدوات إنشاء وفحص رموز QR بطريقة بسيطة، سريعة، وآمنة تماماً. تم تطوير هذه المنصة لتكون الحل الأمثل لكل من يحتاج إلى إنشاء رموز QR احترافية أو فحصها دون الحاجة إلى تثبيت تطبيقات أو القلق بشأن خصوصية بياناته.</p>
+        <p><strong>مهمتنا:</strong> تمكين المستخدمين حول العالم من استخدام تقنية QR Code بسهولة، مع الحفاظ الكامل على خصوصية بياناتهم.</p>
+    </div>
+
+    <div class="card">
+        <h2>💡 لماذا تختار QR Pro Tools؟</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3>خصوصية تامة</h3>
+                <p>كل العمليات تتم في متصفحك - لا خوادم، لا تخزين، لا تتبع.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>سرعة فائقة</h3>
+                <p>أداة خفيفة جداً تعمل مباشرة دون انتظار أو تأخير.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3>متوافق مع الجميع</h3>
+                <p>يعمل على جميع الأجهزة: الحاسوب، الهاتف، الجهاز اللوحي.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎨</div>
+                <h3>تخصيص كامل</h3>
+                <p>تحكم في الألوان والحجم والجودة لتناسب احتياجاتك.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>👨‍💻 المطور</h2>
+        <p style="font-size: 1.1rem;"><strong>عماد الدين لمراني (Imad Eddine Limrani)</strong></p>
+        <p>مطور برمجيات وشغوف بتقنيات الويب المفتوحة المصدر. أؤمن بأن التقنية يجب أن تكون متاحة للجميع، مجانية وآمنة. هذا المشروع هو نتاج جهود فردية بهدف خدمة المجتمع العربي والعالمي.</p>
+        <div class="tech-stack">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">QR Code API</span>
+            <span class="tech-badge">Open Source</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🚀 تقنياتنا</h2>
+        <p>نحن نستخدم أحدث تقنيات الويب لضمان أفضل تجربة للمستخدم:</p>
+        <ul>
+            <li><strong>html5-qrcode:</strong> مكتبة قوية لمسح رموز QR باستخدام الكاميرا</li>
+            <li><strong>qrcodejs:</strong> لإنشاء رموز QR عالية الجودة مباشرة في المتصفح</li>
+            <li><strong>Vanilla JavaScript:</strong> بدون أطر عمل ثقيلة لضمان السرعة</li>
+            <li><strong>Responsive Design:</strong> تصميم يتكيف مع جميع أحجام الشاشات</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🌍 رؤيتنا للمستقبل</h2>
+        <p>نطمح إلى:</p>
+        <ul>
+            <li>➕ إضافة المزيد من أنواع رموز QR (خرائط Google، أحداث التقويم، الدفع)</li>
+            <li>📊 إضافة إحصائيات وتحليلات لرموز QR (اختياري للمستخدمين المسجلين)</li>
+            <li>🔧 تطوير API مفتوح للمطورين لدمج خدماتنا في تطبيقاتهم</li>
+            <li>🌐 توسيع الدعم للغات إضافية</li>
+        </ul>
+        <p>كل هذا مع الحفاظ على مبدأنا الأساسي: <strong>الخصوصية أولاً</strong>.</p>
+    </div>
+
+    <div class="card">
+        <h2>💖 ادعمنا</h2>
+        <p>QR Pro Tools هو مشروع مفتوح المصدر ومجاني بالكامل. إذا وجدت الأداة مفيدة، يمكنك دعمنا بـ:</p>
+        <ul>
+            <li>⭐ مشاركة الأداة مع أصدقائك وزملائك</li>
+            <li>🐛 الإبلاغ عن أي أخطاء أو مشاكل تقابلها</li>
+            <li>💡 اقتراح ميزات جديدة لتطوير المنصة</li>
+            <li>🌟 وضع نجمة على GitHub إذا كان المشروع متوفراً هناك</li>
+        </ul>
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="contact.html" class="back-btn">📧 تواصل معنا</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 QR Pro Tools | صمم بواسطة <a href="about.html">عماد الدين لمراني</a></p>
+    <p><a href="privacy.html">سياسة الخصوصية</a> | <a href="terms.html">شروط الاستخدام</a> | <a href="contact.html">اتصل بنا</a></p>
+</footer>
+
+</body>
+</html>
