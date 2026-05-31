@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- الصفحة الرئيسية -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- صفحة فحص QR -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/scanner.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- صفحة إنشاء QR -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/generator.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- صفحة من نحن -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/about.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- صفحة سياسة الخصوصية -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/privacy.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- صفحة شروط الاستخدام -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/terms.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- صفحة اتصل بنا -->
+    <url>
+        <loc>https://gpldroid.github.io/br-qr/contact.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
